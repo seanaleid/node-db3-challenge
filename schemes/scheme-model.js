@@ -37,7 +37,7 @@ function add(scheme) {
 
 function addStep(step, id) {
     return db('steps')
-        .insert(step, id)
+        .insert(step)
         .then(ids => ({ id: ids[0] }));
 }
 
