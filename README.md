@@ -27,7 +27,7 @@ Use a graphical tool like `SQLite Studio` to open `./data/northwind.db3` and exe
 
 Write helpers methods in `./schemes/scheme-model.js` that match the following specifications:
 
-- `find()`:
+-[X] `find()`:
   - Calling find returns a promise that resolves to an array of all schemes in the database.
   - No steps are included.
 - `findById(id)`:
