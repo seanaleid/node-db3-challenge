@@ -26,7 +26,7 @@ function add(scheme) {
         });
 }
 
-function update(changes, id) {
+function update(id, changes) {
     return db('schemes')
         .where({id})
         .update(changes);
