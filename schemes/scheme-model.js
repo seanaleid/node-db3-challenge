@@ -2,7 +2,8 @@ const db = require('../dbConfig.js')
 
 module.exports = {
     find,
-    findById
+    findById,
+    add,
 }
 
 function find() {
@@ -14,3 +15,19 @@ function findById(id) {
         .where({id})
         .first();
 }
+
+function add(scheme) {
+    return db('schemes')
+        .insert(scheme)
+        .then(id => {
+            return findById(id[0]);
+        });
+}
+
+// function update(changes, id) {
+    
+// }
+
+// function remove(id) {
+    
+// }
